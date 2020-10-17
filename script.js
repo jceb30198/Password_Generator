@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Password character bank.
 var uppercaseCharacter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowercaseCharacter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numberCharacter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -30,17 +31,37 @@ function writePassword() {
       var confirmLowercase = confirm("Would you like lowercase letters in the password?");
       var confirmUppercase = confirm("Would you like uppercase letters in the password?");
     }
-    console.log(confirmNumber); // Test Point
 
-    if (confirmNumber, confirmSpecial, confirmUppercase, confirmLowercase == false) {
-      alert("Must accept at least one of the criteria");
+    // Booleans confirm check.
+    if (confirmNumber == false && confirmSpecial == false && confirmUppercase == false && confirmLowercase == false) {
+      alert("Must accept at least one of the criteria.");
+
       console.log("error"); // Test Point
     }
 
-    else if (confirmNumber, confirmSpecial, confirmUppercase, confirmLowercase == true) {
-      console.log("success");
+    if (confirmNumber) {
+      
+
+      console.log("success_1"); // Test Point
     }
 
+    if (confirmSpecial) {
+
+
+      console.log("success_2"); // Test Point
+    }
+
+   if (confirmLowercase) {
+
+
+      console.log("success_3"); // Test Point
+    }
+
+    if (confirmUppercase) {
+
+
+      console.log("success_4"); // Test Point
+    }
   }
 }
 
