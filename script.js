@@ -1,6 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var uppercaseCharacter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowercaseCharacter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberCharacter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+var specialCharacter = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "{", "}"];
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -16,16 +21,26 @@ function writePassword() {
     // If else statement for determining length of password.
     if (passwordLength === "" || passwordLength < 8 || passwordLength > 128) {
       alert("Please input a number between 8 and 128.");
-      console.log("error");
+      console.log("error"); // Test Point
     }
     else {
-      // Booleans to confirm whether to put variables into generator.
+      // Booleans to confirm whether to put variables into generator. Only if password is between 8 and 128.
       var confirmNumber = confirm("Would you like numbers in the password?");
       var confirmSpecial = confirm("Would you like special characters in the password?");
       var confirmLowercase = confirm("Would you like lowercase letters in the password?");
       var confirmUppercase = confirm("Would you like uppercase letters in the password?");
     }
-    console.log(confirmNumber);
+    console.log(confirmNumber); // Test Point
+
+    if (confirmNumber, confirmSpecial, confirmUppercase, confirmLowercase == false) {
+      alert("Must accept at least one of the criteria");
+      console.log("error"); // Test Point
+    }
+
+    else if (confirmNumber, confirmSpecial, confirmUppercase, confirmLowercase == true) {
+      console.log("success");
+    }
+
   }
 }
 
